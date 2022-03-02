@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,11 @@
   --main-color: ;
   --bg-color: hsl(185, 75%, 39%);
   --p-color: hsl(227, 10%, 46%);
+  --h4-color: hsl(229, 23%, 23%);
   --rad: 10px;
+}
+h4 {
+  color: var(--h4-color);
 }
 p {
   color: var(--p-color);
@@ -16,115 +21,76 @@ h4 {
   font-size: 18px;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   text-transform: capitalize;
 }
-.box {
-  background-color: var(--bg-color);
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.box .top {
-  position: absolute;
-  top: -70%;
-  left: -20%;
-  /* width: 400px; */
-  max-width: 100%;
-}
-.box .bot {
-  position: absolute;
-  bottom: -70%;
-  right: -20%;
-  max-width: 100%;
-}
-@media (max-width: 767px) {
-  .box .top {
-    max-width: calc(100% + 200px);
-    top: -200px;
-    left: -350px;
-  }
-  .box .bot {
-    max-width: calc(100% + 200px);
-    bottom: -200px;
-    right: -350px;
-  }
-}
-/* -------cont------------ */
 .cont {
+  background-image: url(images/bg-pattern-bottom.svg),
+    url(images/bg-pattern-top.svg);
+  background-repeat: no-repeat;
+  background-position: top 10vh left 60vw, bottom 20vh right 60vw;
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* -------card-------- */
+.card {
   background-color: white;
-  width: 300px;
   border-radius: var(--rad);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
   -webkit-border-radius: var(--rad);
   -moz-border-radius: var(--rad);
   -ms-border-radius: var(--rad);
   -o-border-radius: var(--rad);
-  box-shadow: 0px 5px 10px hsla(229, 23%, 23%, 0.301);
 }
-.cont .pic {
+.card .pic {
   position: relative;
-  width: 300px;
 }
-.cont .pic .cover {
-  width: 100%;
+.card .pic .cover {
   border-top-left-radius: var(--rad);
   border-top-right-radius: var(--rad);
 }
-.cont .pic .profile {
-  /*display: inline;
-  */
+.card .pic .profile {
   position: absolute;
-  bottom: -40px;
+  top: -0%;
   left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+  transform: translate(-50%, 100%);
+  -webkit-transform: translate(-50%, 100%);
+  -moz-transform: translate(-50%, 100%);
+  -ms-transform: translate(-50%, 100%);
+  -o-transform: translate(-50%, 100%);
   outline: 5px solid white;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  /* width: calc(- 100px); */
 }
-/* --------txt------------ */
 .txt {
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 20px;
   text-align: center;
 }
 .txt h4 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .txt h4 span {
-  font-weight: normal;
+  font-weight: initial;
   color: var(--p-color);
 }
-.txt p {
-  font-size: 14px;
-}
-/* -----------vw----------- */
+/* ----------vw------------ */
 .vw {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  padding: 20px 30px;
   border-top: 1px solid #aaa;
-}
-.vw .vw-bx {
   text-align: center;
 }
-.vw .vw-bx p {
+.vw p {
   margin-top: 5px;
   font-size: 10px;
+  letter-spacing: 2px;
 }
